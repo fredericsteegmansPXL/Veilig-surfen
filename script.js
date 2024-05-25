@@ -46,12 +46,11 @@ let shuffledIndexes = Array.from({ length: quizData.length }, (_, index) => inde
 loadQuiz();
 
 function loadQuiz() {
-    // Remove inline display styles
+
     questionElement.style.removeProperty('display');
     optionsElement.style.removeProperty('display');
     imageContainer.style.removeProperty('display');
 
-    // Shuffle the indexes if it's the first question or all questions have been asked
     if (currentQuestion === 0 || currentQuestion >= quizData.length) {
         shuffledIndexes = shuffleArray(shuffledIndexes);
         currentQuestion = 0;
@@ -66,23 +65,18 @@ function loadQuiz() {
         button.innerText = option;
         button.classList.add("option");
         button.addEventListener("click", () => {
-            // Store the user's answer
             userAnswer = option;
-            // Enable submit button
             submitButton.style.display = "block";
-            // Remove 'selected' class from all option buttons
             document.querySelectorAll('.option').forEach(btn => {
                 btn.classList.remove("selected");
             });
-            // Add 'selected' class to the clicked button
             button.classList.add("selected");
         });
         optionsElement.appendChild(button);
     });
-    // Hide submit button initially
     submitButton.style.display = "none";
     restartButton.style.display = "none";
-    resultElement.innerText = ""; // Clear result paragraph
+    resultElement.innerText = "";
 }
 
 function selectOption() {
@@ -90,7 +84,6 @@ function selectOption() {
     if (userAnswer === currentQuizData.answer) {
         score++;
     }
-    // Clear the user's answer
     userAnswer = null;
 }
 
@@ -99,9 +92,8 @@ function showResult() {
 
     questionElement.style.display = "none";
     optionsElement.style.display = "none";
-    imageContainer.style.display = "none"; // Hide image container
+    imageContainer.style.display = "none";
 
-    // Loop through shuffledIndexes to display questions and answers in the same order they were asked
     shuffledIndexes.forEach((index, i) => {
         const quizItem = quizData[index];
         const question = document.createElement("p");
@@ -113,7 +105,7 @@ function showResult() {
         answer.style.paddingBottom = "40px";
         resultElement.appendChild(question);
         resultElement.appendChild(answer);
-        resultElement.appendChild(document.createElement("hr")); // Add a horizontal line between questions
+        resultElement.appendChild(document.createElement("hr"));
     });
 
     submitButton.style.display = "none";
@@ -121,7 +113,7 @@ function showResult() {
 }
 
 submitButton.addEventListener("click", () => {
-    selectOption(); // Evaluate the user's answer
+    selectOption();
     currentQuestion++;
     if (currentQuestion < quizData.length) {
         loadQuiz();
@@ -136,7 +128,6 @@ restartButton.addEventListener("click", () => {
     loadQuiz();
 });
 
-// Function to shuffle an array using Fisher-Yates algorithm
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
