@@ -1,0 +1,115 @@
+* {
+    font-family: 'Roobert VRT', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4fff8;
+}
+
+.quiz-container {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #a3f8c3;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f7fffa;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 30pt;
+}
+
+h1 span {
+    color: #29BD90;
+}
+
+#options {
+    margin-top: 10px;
+}
+
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #29BD90;
+    color: white;
+}
+
+#submit, #restart{
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #29BD90;
+    transition: 0.1s;
+}
+
+#submit::after, #restart::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,#29BD90 17.8%, #44deaf 100.2% );
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#submit:active, #restart:active {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient( circle farthest-corner at 10% 20%,  #29BD90 17.8%, #44deaf 100.2% );
+    transition: 0.5s;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: white;
+    border: 1px solid #29BD90;
+    color: #29BD90;
+    margin-bottom: 10px;
+
+}
+
+.option.selected {
+    background-color: #29BD90;
+    border: 1px solid #29BD90;
+    color: #ffffff;
+    box-shadow: 1px 1px 10px rgba(41, 189, 144, 0.5);
+}
+
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#image-container #question-image {
+    max-width: 60%;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 22px rgba(6, 6, 80, 0.28);
+}
