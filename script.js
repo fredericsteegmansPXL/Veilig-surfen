@@ -1,33 +1,39 @@
 const quizData = [
     {
-        question: "Wat is de term voor het proces waarbij computers zelfstandig leren en verbeteren zonder expliciete programmering?",
-        imagePath: "assets/computer.webp",
-        options: ["Zelflerend programmeren", "Kunstmatige intelligentie", "Machine learning", "Augmented reality"],
-        answer: "Machine learning"
+        question: "Is het verstandig om tweefactorauthenticatie (2FA) in te schakelen voor je online accounts?",
+        imagePath: "assets/Boom 8.png",
+        options: ["Ja", "Nee"],
+        answer: "Ja"
     },
     {
-        question: "Wat betekent \"VR\" in de context van moderne technologie?",
-        imagePath: "assets/vr.webp",
-        options: ["Virtuele realiteit", "Verrassende robotica", "Visuele reproductie", "Virtuele representatie"],
-        answer: "Virtuele realiteit"
+        question: "Wat is phishing?",
+        imagePath: "assets/Nemo 1.png",
+        options: ["Een methode om malware te verwijderen", "Een techniek waarbij criminelen proberen persoonlijke informatie te verkrijgen door zich voor te doen als een betrouwbare entiteit", "Een manier om je wachtwoorden te onthouden", "Een beveiligingsmaatregel om je netwerk te beschermen"],
+        answer: "Een techniek waarbij criminelen proberen persoonlijke informatie te verkrijgen door zich voor te doen als een betrouwbare entiteit"
     },
     {
-        question: "Wat is een van de belangrijkste toepassingen van blockchain-technologie?",
-        imagePath: "assets/blockchain.png",
-        options: ["Website design", "Cryptocurrency", "Biometrische identificatie", "Cloud computing"],
-        answer: "Cryptocurrency"
+        question: "Wat betekent het als een website een SSL-certificaat heeft?",
+        imagePath: "assets/Keuken 1.png",
+        options: ["De website is gegarandeerd veilig en betrouwbaar", "De communicatie tussen je browser en de website is versleuteld", "De website is snel en efficiënt", "De website is gratis toegankelijk"],
+        answer: "De communicatie tussen je browser en de website is versleuteld"
     },
     {
-        question: "Welke beroemde zakenman en filantroop staat bekend om zijn visie op AI en ruimteverkenning met bedrijven als Tesla en SpaceX?",
-        imagePath: "assets/spacex.jpeg",
-        options: ["Jeff Bezos", "Mark Zuckerberg", "Elon Musk", "Bill Gates"],
-        answer: "Elon Musk"
+        question: "Is het veilig om je wachtwoorden op te slaan in je webbrowser?",
+        imagePath: "assets/Snooker 3.png",
+        options: ["Ja", "Nee"],
+        answer: "Nee"
     },
     {
-        question: "Welke bekende zangeres en zakenvrouw heeft onlangs aangekondigd dat ze een AI-bedrijf gaat oprichten om kunstmatige intelligentie te gebruiken in de muziekwereld?",
-        imagePath: "assets/DJ.png",
-        options: ["Beyoncé", "Taylor Swift", "Ariana Grande", "Rihanna"],
-        answer: "Rihanna"
+        question: "Wat betekent \"social engineering\" in de context van cybersecurity?",
+        imagePath: "assets/Meetingroom.png",
+        options: ["Het ontwerpen van sociale netwerken", "Het gebruik van sociale interactie om mensen te misleiden en gevoelige informatie te verkrijgen", "Het bouwen van beveiligde software", "Het beheren van online communities"],
+        answer: "Het gebruik van sociale interactie om mensen te misleiden en gevoelige informatie te verkrijgen"
+    },
+    {
+        question: "Wat is een VPN (Virtual Private Network)?",
+        imagePath: "assets/Draak 9.png",
+        options: ["Een netwerk dat alleen gebruikt wordt door overheidsinstanties", "Een beveiligingsprotocol voor draadloze netwerken", "Een technologie die je internetverbinding versleutelt en je anonimiteit online beschermt", "Een soort wachtwoordmanager"],
+        answer: "Een technologie die je internetverbinding versleutelt en je anonimiteit online beschermt"
     }
 ];
 
